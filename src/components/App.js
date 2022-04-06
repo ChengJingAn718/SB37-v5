@@ -9,7 +9,7 @@ import Scene4 from "../Scenes/scene4";
 import Excellent from "../Scenes/excellent"
 import WellDone from "../Scenes/welldone"
 
-import { MusicButton } from './CommonButotns';
+import { MusicButton } from './CommonButtons';
 
 var __geo;
 var backgroundImageIndex = 0;

@@ -71,7 +71,7 @@ const MusicButton = React.forwardRef((prop, ref) => {
         }
         else {
             _setBackgroundPlaying(true);
-            prop.backAudio.play().catch(error=>{});
+            prop.backAudio.play().catch(error => { });
         }
     }
 
@@ -79,6 +79,7 @@ const MusicButton = React.forwardRef((prop, ref) => {
         <div
             ref={ref}
             className='commonButton'
+            onClick={controlBacksound}
             style={{
                 position: "fixed", width: prop._geo.width * 0.055 + "px",
                 height: prop._geo.width * 0.055 + "px",
@@ -87,7 +88,7 @@ const MusicButton = React.forwardRef((prop, ref) => {
                 cursor: 'pointer',
             }}>
             <img draggable={false}
-                onClick={controlBacksound}
+
                 width={"100%"}
                 src={prePathUrl() + "images/Buttons/" + (_isBackSoundPlaying ? "Audio_unmute" : "Audio_mute") + ".svg"}
             />
