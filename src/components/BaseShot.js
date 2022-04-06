@@ -4,7 +4,7 @@ import { isMobile } from "react-device-detect";
 import "../stylesheets/styles.css";
 import loadSound from "../utils/loadSound"
 import { prePathUrl } from "./CommonFunctions"
-import { LoadingCircleBar } from "./CommonButotns";
+import { LoadingCircleBar } from "./CommonButtons";
 
 var oldBackgroundImage = 'SB_37_Stage_BG_2';
 var _isBackSoundPlaying = true;
