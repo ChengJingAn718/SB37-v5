@@ -459,7 +459,7 @@ const Scene1 = React.forwardRef(({ nextFunc, _baseGeo, _startTransition, gameNum
     function fomartFunc() {
         introHolder.current.style.top = _baseGeo.top - _baseGeo.height * 0.7 + 'px';
 
-        audioList.bodyAudio1.src = returnAudioPath('09')
+        audioList.bodyAudio1.src = returnAudioPath('08')
         audioList.bodyAudio2.src = returnAudioPath('22')
         audioList.bodyAudio3.src = returnAudioPath('38')
 
