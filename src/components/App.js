@@ -17,7 +17,7 @@ var backgroundImageList = [
   "SB_37_Stage_BG_2", //1
 
   "SB_37_Stage_BG_2",//2
-  "SB_37_Land-and-Water_BG_2",//3 
+  "SB_37_Land_BG_1",//3 
   "SB_37_Well-Done_BG",//4
 
   "SB_37_Stage_BG_2",//5
