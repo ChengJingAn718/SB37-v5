@@ -87,6 +87,9 @@ const MusicButton = React.forwardRef((prop, ref) => {
             setTimeout(() => {
                 currentRef.current.className = 'commonButton'
             }, 2000);
+        },
+        setClass: (prop) => {
+            currentRef.current.className = prop
         }
     }
     ))

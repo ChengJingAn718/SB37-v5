@@ -94,7 +94,7 @@ const App = React.forwardRef(({ geo, _setBackground, _startTransition, baseGeo, 
         musicRef.current.fomartSound();
       }, 500);
 
-     
+
     }
     setIndex(judgeNum);
 
@@ -108,7 +108,7 @@ const App = React.forwardRef(({ geo, _setBackground, _startTransition, baseGeo, 
 
 
   function goHome() {
-    musicRef.current.className = 'hideObject'
+    musicRef.current.setClass('hideObject')
     audioList.backAudio.pause();
     audioList.backAudio.currentTime = 0;
     setFomart(0);
