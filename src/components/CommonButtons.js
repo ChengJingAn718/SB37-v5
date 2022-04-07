@@ -1,4 +1,4 @@
-
+import { useRef } from "react";
 import React, { useState } from "react";
 import "../stylesheets/styles.css";
 import { prePathUrl } from "./CommonFunctions"
@@ -62,7 +62,7 @@ const FullScreenBtn = React.forwardRef((prop, ref) => {
 });
 
 const MusicButton = React.forwardRef((prop, ref) => {
-
+    const currentRef = useRef();
     const [_isBackSoundPlaying, _setBackgroundPlaying] = useState(true);
     function controlBacksound() {
         if (_isBackSoundPlaying) {
@@ -75,10 +75,26 @@ const MusicButton = React.forwardRef((prop, ref) => {
         }
     }
 
+    React.useImperativeHandle(ref, () => ({
+        fomartSound: () => {
+            setTimeout(() => {
+                currentRef.current.className = 'introText'
+                prop.backAudio.currentTime = 0;
+                prop.backAudio.play().catch(error => { });
+                _setBackgroundPlaying(true);
+                
+            }, 500);
+            setTimeout(() => {
+                currentRef.current.className = 'commonButton'
+            }, 2000);
+        }
+    }
+    ))
+
     return (
         <div
-            ref={ref}
-            className='commonButton'
+            ref={currentRef}
+            className='hideObject'
             onClick={controlBacksound}
             style={{
                 position: "fixed", width: prop._geo.width * 0.055 + "px",
@@ -88,7 +104,6 @@ const MusicButton = React.forwardRef((prop, ref) => {
                 cursor: 'pointer',
             }}>
             <img draggable={false}
-
                 width={"100%"}
                 src={prePathUrl() + "images/Buttons/" + (_isBackSoundPlaying ? "Audio_unmute" : "Audio_mute") + ".svg"}
             />

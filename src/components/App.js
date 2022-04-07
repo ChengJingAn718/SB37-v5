@@ -91,12 +91,10 @@ const App = React.forwardRef(({ geo, _setBackground, _startTransition, baseGeo, 
   function setFomart(judgeNum) {
     if (judgeNum == 1) {
       setTimeout(() => {
-        musicRef.current.className = 'introText'
+        musicRef.current.fomartSound();
       }, 500);
 
-      setTimeout(() => {
-        musicRef.current.className = 'commonButton'
-      }, 2000);
+     
     }
     setIndex(judgeNum);
 
